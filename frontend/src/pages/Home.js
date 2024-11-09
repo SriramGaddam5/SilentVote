@@ -183,7 +183,7 @@ function Home() {
               fontWeight="extrabold"
               mt={10}
             >
-              Your Personal Financial Assistant
+              Anonymous voting
             </Text>
             <LuPiggyBank id="slide-right" size={100} />
           </SlideFade>
