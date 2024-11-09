@@ -6,9 +6,11 @@ import "../styles/Privacy.css";
 function Privacy() {
   return (
     <div id="Body">
-      <Heading p="30px">Privacy Policy</Heading>
+      <Heading p="30px" color="gray.300">
+        Privacy Policy
+      </Heading>
       <HStack my="10">
-        <Text p="30px" fontSize={"xl"}>
+        <Text p="30px" fontSize={"xl"} color="white">
           This website collects personal data such as financial data to power
           our LLM's responses
         </Text>

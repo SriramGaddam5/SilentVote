@@ -22,7 +22,7 @@ function App() {
       />
       <link
         rel="stylesheet"
-        href="//fonts.googleapis.com/css?family=Major%20Mono%20Display&amp;lang=en"
+        href="//fonts.googleapis.com/css?family=Major+Mono+Display&amp;lang=en"
       />
       <Navbar />
       <Router>

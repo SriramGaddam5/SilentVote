@@ -34,9 +34,11 @@ function Data() {
 
   return (
     <div id="Body">
-      <Heading p="30px">Data</Heading>
+      <Heading p="30px" color="gray.300">
+        Data
+      </Heading>
       {/* Income input */}
-      <VStack p="30px" spacing="20px">
+      <VStack p="30px" spacing="20px" color="white">
         <Text fontSize={"xl"}>Enter Annual Income</Text>
         <Input
           placeholder="Type your Income here"
@@ -49,7 +51,7 @@ function Data() {
         <br />
       </VStack>
       {/* Expenditures input */}
-      <VStack p="30px" spacing="20px">
+      <VStack p="30px" spacing="20px" color="white">
         <Text fontSize={"xl"}>Enter Annual Expenditures</Text>
         <Input
           placeholder="Type your Expenditures here"
@@ -62,7 +64,7 @@ function Data() {
         <br />
       </VStack>
       {/* Savings input */}
-      <VStack p="30px" spacing="20px">
+      <VStack p="30px" spacing="20px" color="white">
         <Text fontSize={"xl"}>Enter Annual amount put into Savings</Text>
         <Input
           placeholder="Type your Savings here"
