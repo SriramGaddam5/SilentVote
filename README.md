@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://raw.githubusercontent.com/SriramGaddam5/Finnow/196b59b7069f24f98b749b5e587151d707b47b58/public/images/Shark%20fin.svg" alt="Silent Vote Logo" width="200">
+    <img src="https://raw.githubusercontent.com/SriramGaddam5/SilentVote/refs/heads/main/frontend/public/logo512.png" alt="Silent Vote Logo" width="200">
   <br>
   Silent Vote
 </h1>

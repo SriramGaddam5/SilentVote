@@ -71,9 +71,9 @@ function Home() {
         cover: {
           color: {
             value: {
-              r: 255,
-              g: 255,
-              b: 255,
+              r: 0,
+              g: 0,
+              b: 0,
             },
           },
           opacity: 1,
@@ -83,14 +83,14 @@ function Home() {
       fps_limit: 60,
       background: {
         image:
-          "url('https://static.vecteezy.com/system/resources/thumbnails/001/217/366/small/polygonal-blue-background.jpg')",
+          "url('https://img.freepik.com/premium-vector/polygon-abstract-polygonal-geometric-triangle-background_212889-4821.jpg?semt=ais_hybrid')",
       },
       particles: {
         color: {
-          value: "#B8E5FA",
+          value: "#4a1772",
         },
         links: {
-          color: "#2B3990",
+          color: "#9333ea",
           distance: 150,
           enable: true,
           opacity: 1,
@@ -164,7 +164,7 @@ function Home() {
             <Text
               id="title"
               ref={ref}
-              bgGradient="linear(to-r, blue.200, blue.900)"
+              bgGradient="linear(to-b, purple.200, purple.900)"
               bgClip="text"
               fontSize="100"
               fontWeight="extrabold"
@@ -177,13 +177,13 @@ function Home() {
           <SlideFade in={enterCount > 0} direction="right" offsetX="100px">
             <Text
               ref={ref}
-              bgGradient="linear(to-r, blue.200, blue.900)"
+              bgGradient="linear(to-b, purple.200, purple.900)"
               bgClip="text"
               fontSize="50"
               fontWeight="extrabold"
               mt={10}
             >
-              Anonymous voting
+              Decentralized anonymous voting
             </Text>
             <LuPiggyBank id="slide-right" size={100} />
           </SlideFade>

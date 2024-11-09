@@ -15,7 +15,7 @@ function Learn() {
       <VStack p="30px" spacing="20px">
         <Text fontSize={"xl"}>Ask your questions here</Text>
         <Input placeholder="Type your question here" />
-        <Button colorScheme="blue">Submit</Button>
+        <Button colorScheme="purple">Submit</Button>
         <br />
         <Textarea isDisabled placeholder="Output" />
       </VStack>

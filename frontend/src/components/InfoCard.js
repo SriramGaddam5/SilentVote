@@ -34,7 +34,8 @@ function InfoCard({
       <ScaleFade
         initialScale={0.9}
         in={enterCount > 0}
-        whileHover={{ scale: 1.01 }}>
+        whileHover={{ scale: 1.01 }}
+      >
         <Tooltip label={cardDescription} rounded="lg">
           <LinkBox
             maxW="sm"
@@ -45,7 +46,8 @@ function InfoCard({
             _active={{
               transform: "scale(1.01)",
               bgColor: "gray.50",
-            }}>
+            }}
+          >
             <HStack>
               <Image
                 src={imageSrc}
@@ -57,10 +59,15 @@ function InfoCard({
                 p={5}
               />
               <VStack p={5}>
-                <Heading size="md" my="2">
+                <Heading
+                  size="md"
+                  my="2"
+                  bgGradient="linear(to-r, purple.200, purple.500)"
+                  bgClip="text"
+                >
                   <LinkOverlay href={cardLink}>{cardTitle}</LinkOverlay>
                 </Heading>
-                <Text>{cardDescription}</Text>
+                <Text color="white">{cardDescription}</Text>
               </VStack>
             </HStack>
           </LinkBox>

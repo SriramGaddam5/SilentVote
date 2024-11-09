@@ -11,7 +11,7 @@ import "../src/styles/App.css";
 
 function App() {
   return (
-    <div>
+    <div id="Body">
       <link
         rel="stylesheet"
         href="//fonts.googleapis.com/css?family=Quicksand&amp;lang=en"

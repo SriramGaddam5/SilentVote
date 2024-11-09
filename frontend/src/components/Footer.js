@@ -9,14 +9,14 @@ function Footer() {
       <Flex
         p={5}
         mt={10}
-        bg="blue.900"
+        bgGradient="linear(to-t, purple.900, black)"
         color="white"
         gap="5"
         alignItems="center"
       >
         <Text p="1">© 2024 Silent Vote</Text>
-        <Tooltip label="Check out the hackathon Instagram!" rounded="lg">
-          <Link href="https://www.instagram.com/tamuhack/" isExternal>
+        <Tooltip label="Check out the datathon Instagram!" rounded="lg">
+          <Link href="https://www.instagram.com/tamudatathon/" isExternal>
             <AiFillInstagram size={25} />
           </Link>
         </Tooltip>
@@ -24,10 +24,7 @@ function Footer() {
           label="Subscribe to the hackathon YouTube channel!"
           rounded="lg"
         >
-          <Link
-            href="https://www.youtube.com/channel/UC8EIHSuBGeNlUm1G0STS2yg"
-            isExternal
-          >
+          <Link href="https://www.youtube.com/@tamudatathon23" isExternal>
             <FaYoutube size={25} />
           </Link>
         </Tooltip>
@@ -45,9 +42,9 @@ function Footer() {
               py="1"
               rounded="full"
               bg="white"
-              color="blue.900"
-              _hover={{ background: "blue.50", transform: "scale(0.99)" }}
-              _active={{ background: "blue.100", transform: "scale(1.01)" }}
+              color="purple.900"
+              _hover={{ background: "purple.50", transform: "scale(0.99)" }}
+              _active={{ background: "purple.100", transform: "scale(1.01)" }}
             >
               GitHub
             </Box>
