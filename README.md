@@ -10,12 +10,4 @@ Silent Vote is a platform intended to assist users with their financial journey.
 
 ## Features
 
-Things you can expect to learn
-
-- How to make a budget
-- Personal financial literacy
-- How to start investing
-- Best ways to save money
-- And much, much more!
-
-This project was a part of TAMUhack X a 24 hour hackathon. You can learn more about it [here](https://x.tamuhack.org/)
+This project was a part of Datathon 2024 a 24 hour hackathon. You can learn more about it [here](https://x.tamuhack.org/)
