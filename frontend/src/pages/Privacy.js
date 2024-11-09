@@ -1,5 +1,5 @@
 import { Heading, Text, HStack } from "@chakra-ui/react";
-import { LuPiggyBank } from "react-icons/lu";
+import { LuVote } from "react-icons/lu";
 
 import "../styles/Privacy.css";
 
@@ -13,7 +13,7 @@ function Privacy() {
           our LLM's responses
         </Text>
       </HStack>
-      <LuPiggyBank id="slide-right" size={100} />
+      <LuVote id="slide-right" size={100} />
     </div>
   );
 }

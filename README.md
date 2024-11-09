@@ -10,4 +10,4 @@ Silent Vote is a platform intended to assist users with their financial journey.
 
 ## Features
 
-This project was a part of Datathon 2024 a 24 hour hackathon. You can learn more about it [here](https://x.tamuhack.org/)
+This project was a part of Datathon 2024 a 24 hour hackathon. You can learn more about it [here](https://www.tamudatathon.com/)

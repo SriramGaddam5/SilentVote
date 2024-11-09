@@ -21,7 +21,7 @@ function Footer() {
           </Link>
         </Tooltip>
         <Tooltip
-          label="Subscribe to the hackathon YouTube channel!"
+          label="Subscribe to the datathon YouTube channel!"
           rounded="lg"
         >
           <Link href="https://www.youtube.com/@tamudatathon23" isExternal>

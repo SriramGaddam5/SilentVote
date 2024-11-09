@@ -45,7 +45,7 @@ function InfoCard({
             ref={ref}
             _active={{
               transform: "scale(1.01)",
-              bgColor: "gray.50",
+              bgColor: "gray.800",
             }}
           >
             <HStack>

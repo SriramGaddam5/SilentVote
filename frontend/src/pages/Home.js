@@ -1,7 +1,8 @@
 import { Text, VStack, HStack, SlideFade } from "@chakra-ui/react";
 import { useEffect, useMemo, useState, useRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { LuPiggyBank } from "react-icons/lu";
+import { LuVote } from "react-icons/lu";
+import { IoShieldOutline } from "react-icons/io5";
 import { loadSlim } from "@tsparticles/slim";
 import InfoCard from "../components/InfoCard";
 import { useInViewport } from "react-in-viewport";
@@ -167,29 +168,27 @@ function Home() {
               bgGradient="linear(to-b, purple.200, purple.900)"
               bgClip="text"
               fontSize="100"
-              fontWeight="extrabold"
               mt={10}
             >
-              Silent Vote
+              silent Vote
             </Text>
           </SlideFade>
 
           <SlideFade in={enterCount > 0} direction="right" offsetX="100px">
             <Text
               ref={ref}
-              bgGradient="linear(to-b, purple.200, purple.900)"
+              bgGradient="linear(to-t, purple.300, purple.500)"
               bgClip="text"
               fontSize="50"
-              fontWeight="extrabold"
               mt={10}
             >
               Decentralized anonymous voting
             </Text>
-            <LuPiggyBank id="slide-right" size={100} />
+            <LuVote id="slide-right" size={100} />
           </SlideFade>
           <HStack gap={20}>
             <InfoCard
-              imageSrc="/images/Minnow.svg"
+              imageSrc="/images/Anonymous.svg"
               imageWidth={200}
               imageHeight={200}
               imageAlt="Learning image"
@@ -198,7 +197,7 @@ function Home() {
               cardLink="/data"
             />
             <InfoCard
-              imageSrc="/images/Piggy bank.svg"
+              imageSrc="/images/Shield.svg"
               imageWidth={200}
               imageHeight={200}
               imageAlt="Learning image"
@@ -207,7 +206,7 @@ function Home() {
               cardLink="/learn"
             />
             <InfoCard
-              imageSrc="/images/Shark fin.svg"
+              imageSrc="/images/Vote.svg"
               imageWidth={200}
               imageHeight={200}
               imageAlt="About image"
