@@ -1,0 +1,28 @@
+#particles {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 0;
+}
+
+#title {
+  font-family: "Monoton";
+}
+
+#slide-right {
+  position: absolute;
+  animation: slide-right 3s forwards;
+}
+
+@keyframes slide-right {
+  0% {
+    left: -100px;
+    rotate: 0deg;
+  }
+  100% {
+    left: 0;
+    rotate: 360deg;
+  }
+}

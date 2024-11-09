@@ -1,0 +1,13 @@
+#slide-right {
+  position: absolute;
+  animation: slide-right 1s forwards;
+}
+
+@keyframes slide-right {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0;
+  }
+}
