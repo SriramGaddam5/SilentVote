@@ -13,12 +13,7 @@ function About() {
       <HStack my="10" p="30px">
         <Image src="/images/Vote.svg" w={300} />
         <Text p="30px" fontSize={"xl"} color="white">
-          Silent Vote is a platform intended to assist users with their
-          financial journey. It utilizes an LLM that gives users advice based on
-          their inputted financial data, making recommendations on savings,
-          investments, income, and expenditures. The goal of our platform is to
-          support financial literacy and lower the barrier of entry into the
-          financial world.
+          Silent Vote is a decentralized anonymous voting system.
           <br />
           <br />
           Currently, a voter has to provide identification to prove that they
@@ -26,12 +21,28 @@ function About() {
           may carry other information such as a home address, date of birth,
           proof of funds in a certain currency, or a simple attestation from a
           blockchain wallet that the voter might not want to reveal publicly.
+          <br />
+          <br />
           Blockchain technology provides infrastructure that reduces the
           opportunity for tampering. And with a DApp using Midnight’s
           zero-knowledge technology, voters or a decentralized autonomous
           organization (DAO) voting on behalf of its members can prove what they
           need to without disclosing unnecessary information. The implications
           are wide-ranging and profound.
+          <br />
+          <br />
+          Midnight is a data protection blockchain that offers programmable data
+          protection capabilities powered by zero-knowledge technology to
+          address the delicate balance between data protection, ownership, and
+          utilization. This ensures that developers can leverage blockchain
+          technology without exposing confidential information or losing control
+          over their data.
+          <br />
+          <br />
+          To build on Midnight, all you need is familiarity with TypeScript or a
+          similar JavaScript based library. The service is free to use and their
+          developer documentation has all the information you need to get
+          started.
         </Text>
       </HStack>
       <HStack>
@@ -41,12 +52,24 @@ function About() {
         <Spacer />
         <Image src="/images/Anonymous.svg" w={300} pr="20" />
       </HStack>
+
       <Text p="30px" fontSize={"xl"} mb="10" color="white">
-        Our mission is to provide financial literacy to all. We believe that
-        everyone should have access to financial advice and information, and we
-        strive to make that a reality. We hope to lower the barrier of entry
-        into the financial world and help people make better financial
-        decisions.
+        <Text fontSize={"2xl"} fontWeight={"bold"} color="purple.400">
+          Unblocking widespread adoption of the decentralized web
+        </Text>
+        <br />
+        <br />
+        Utility should not come at the expense of data protection and ownership.
+        <br />
+        <br />
+        Silent Vote is bringing data protection to the blockchain - empowering
+        organizations to deliver regulation-friendly, data-protecting
+        applications that keep users in control of their own information.
+        <br />
+        <br />
+        Harnessing the power of zero-knowledge technology, Silent Vote provides
+        a platform for creating new business models that offer a radically
+        different approach to handling data.
       </Text>
       <LuVote id="slide-right" size={100} />
       <Center>
