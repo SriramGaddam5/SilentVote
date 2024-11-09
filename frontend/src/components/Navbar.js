@@ -10,7 +10,8 @@ function Navbar() {
           <Link
             href="/"
             _hover={{ color: "blue.500", transform: "scale(0.99)" }}
-            _active={{ color: "blue.400", transform: "scale(1.01)" }}>
+            _active={{ color: "blue.400", transform: "scale(1.01)" }}
+          >
             Home
           </Link>
         </Tooltip>
@@ -19,16 +20,18 @@ function Navbar() {
           <Link
             href="/Data"
             _hover={{ color: "blue.500", transform: "scale(0.99)" }}
-            _active={{ color: "blue.400", transform: "scale(1.01)" }}>
+            _active={{ color: "blue.400", transform: "scale(1.01)" }}
+          >
             Data
           </Link>
         </Tooltip>
         <Spacer />
-        <Tooltip label="Ask Finnow any questions you have" rounded="lg">
+        <Tooltip label="Ask Silent Vote any questions you have" rounded="lg">
           <Link
             href="/learn"
             _hover={{ color: "blue.500", transform: "scale(0.99)" }}
-            _active={{ color: "blue.400", transform: "scale(1.01)" }}>
+            _active={{ color: "blue.400", transform: "scale(1.01)" }}
+          >
             Learn
           </Link>
         </Tooltip>
@@ -37,7 +40,8 @@ function Navbar() {
           <Link
             href="/about"
             _hover={{ color: "blue.500", transform: "scale(0.99)" }}
-            _active={{ color: "blue.400", transform: "scale(1.01)" }}>
+            _active={{ color: "blue.400", transform: "scale(1.01)" }}
+          >
             About
           </Link>
         </Tooltip>

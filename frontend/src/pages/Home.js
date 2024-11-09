@@ -168,8 +168,9 @@ function Home() {
               bgClip="text"
               fontSize="100"
               fontWeight="extrabold"
-              mt={10}>
-              Finnow
+              mt={10}
+            >
+              Silent Vote
             </Text>
           </SlideFade>
 
@@ -180,10 +181,11 @@ function Home() {
               bgClip="text"
               fontSize="50"
               fontWeight="extrabold"
-              mt={10}>
+              mt={10}
+            >
               Your Personal Financial Assistant
             </Text>
-            <LuPiggyBank id='slide-right' size = {100}/>
+            <LuPiggyBank id="slide-right" size={100} />
           </SlideFade>
           <HStack gap={20}>
             <InfoCard
@@ -191,8 +193,8 @@ function Home() {
               imageWidth={200}
               imageHeight={200}
               imageAlt="Learning image"
-              cardTitle="Tell Finnow about yourself"
-              cardDescription="Get started with Finnow here"
+              cardTitle="Tell Silent Vote about yourself"
+              cardDescription="Get started with Silent Vote here"
               cardLink="/data"
             />
             <InfoCard
@@ -210,7 +212,7 @@ function Home() {
               imageHeight={200}
               imageAlt="About image"
               cardTitle="About us"
-              cardDescription="Learn more about Finnow"
+              cardDescription="Learn more about Silent Vote"
               cardLink="/about"
             />
           </HStack>

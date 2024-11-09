@@ -1,12 +1,12 @@
 <h1 align="center">
-    <img src="https://raw.githubusercontent.com/SriramGaddam5/Finnow/196b59b7069f24f98b749b5e587151d707b47b58/public/images/Shark%20fin.svg" alt="Finnow Logo" width="200">
+    <img src="https://raw.githubusercontent.com/SriramGaddam5/Silent Vote/196b59b7069f24f98b749b5e587151d707b47b58/public/images/Shark%20fin.svg" alt="Silent Vote Logo" width="200">
   <br>
-  Finnow
+  Silent Vote
 </h1>
 
 ## About
 
-Finnow is a platform intended to assist users with their financial journey. It utilizes an LLM that gives users advice based on their inputted financial data, making recommendations on savings, investments, income, and expenditures. The goal of our platform is to support financial literacy and lower the barrier of entry into the financial world.
+Silent Vote is a platform intended to assist users with their financial journey. It utilizes an LLM that gives users advice based on their inputted financial data, making recommendations on savings, investments, income, and expenditures. The goal of our platform is to support financial literacy and lower the barrier of entry into the financial world.
 
 ## Features
 

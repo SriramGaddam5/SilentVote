@@ -12,8 +12,9 @@ function Footer() {
         bg="blue.900"
         color="white"
         gap="5"
-        alignItems="center">
-        <Text p="1">© 2024 Finnow</Text>
+        alignItems="center"
+      >
+        <Text p="1">© 2024 Silent Vote</Text>
         <Tooltip label="Check out the hackathon Instagram!" rounded="lg">
           <Link href="https://www.instagram.com/tamuhack/" isExternal>
             <AiFillInstagram size={25} />
@@ -21,10 +22,12 @@ function Footer() {
         </Tooltip>
         <Tooltip
           label="Subscribe to the hackathon YouTube channel!"
-          rounded="lg">
+          rounded="lg"
+        >
           <Link
             href="https://www.youtube.com/channel/UC8EIHSuBGeNlUm1G0STS2yg"
-            isExternal>
+            isExternal
+          >
             <FaYoutube size={25} />
           </Link>
         </Tooltip>
@@ -36,7 +39,7 @@ function Footer() {
           </Link>
         </Tooltip>
         <Tooltip label="Check out the GitHub" rounded="lg">
-          <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
+          <Link href="https://github.com/SriramGaddam5/SilentVote" isExternal>
             <Box
               px="2"
               py="1"
@@ -44,7 +47,8 @@ function Footer() {
               bg="white"
               color="blue.900"
               _hover={{ background: "blue.50", transform: "scale(0.99)" }}
-              _active={{ background: "blue.100", transform: "scale(1.01)" }}>
+              _active={{ background: "blue.100", transform: "scale(1.01)" }}
+            >
               GitHub
             </Box>
           </Link>

@@ -11,9 +11,9 @@ function About() {
       <HStack my="10" p="30px">
         <Image src="/images/Dollar.svg" w={300} />
         <Text p="30px" fontSize={"xl"}>
-          Finnow is a platform intended to assist users with their financial
-          journey. It utilizes an LLM that gives users advice based on their
-          inputted financial data, making recommendations on savings,
+          Silent Vote is a platform intended to assist users with their
+          financial journey. It utilizes an LLM that gives users advice based on
+          their inputted financial data, making recommendations on savings,
           investments, income, and expenditures. The goal of our platform is to
           support financial literacy and lower the barrier of entry into the
           financial world.
