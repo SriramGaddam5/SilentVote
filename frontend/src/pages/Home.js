@@ -204,7 +204,7 @@ function Home() {
   }, [timeOnPage]);
 
   // Add a random message from an array that periodically appears on the page
-  // Add a fade effect between messages
+
   const [randomMessage, setRandomMessage] = useState("");
   useEffect(() => {
     const messages = [

@@ -28,7 +28,7 @@
 
 /* Add animated gradient */
 #loadingMessage {
-  background: linear-gradient(270deg, #9333ea, #ff2e63, #ff2e63, #9333ea);
+  background: linear-gradient(270deg, #9333ea, #4a1772, #4a1772, #9333ea);
   background-clip: text;
   background-size: 600% 600%;
   -webkit-animation: animatedBackground 10s ease infinite;
