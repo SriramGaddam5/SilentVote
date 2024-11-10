@@ -72,6 +72,9 @@ function About() {
         a platform for creating new business models that offer a radically
         different approach to handling data.
       </Text>
+       <object data="/images/SilentVoteInfographics.pdf" type="application/pdf" width="100%" height="100%">
+        <p>Alternative text - include a link <a href="/images/SilentVoteInfographics.pdf">to the PDF!</a></p>
+       </object>
       <Center>
         <LuVote size={100} />
       </Center>
