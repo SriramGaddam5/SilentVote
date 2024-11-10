@@ -274,18 +274,12 @@ function Home() {
                     spacing={5}
                     alignItems="start"
                   >
-                    <Feature>Anonymous voting</Feature>
-                    <Feature>Decentralized voting</Feature>
-                    <Feature>Zero-knowledge technology with ZK Snarks</Feature>
-                    <Feature>Blockchain technology</Feature>
-                    <Feature>Secure voting</Feature>
-                    <Feature>Private voting</Feature>
-                    <Feature>Confidential voting</Feature>
-                    <Feature>Secure data protection</Feature>
-                    <Feature>Confidential data protection</Feature>
-                    <Feature>Private data protection</Feature>
-                    <Feature>Zero-knowledge data protection</Feature>
-                    <Feature>Smart contracts</Feature>
+                    <Feature>Decentralized Authentication</Feature>
+                    <Feature>Non-Interactive Zero Knowledge Proofs</Feature>
+                    <Feature>Blockchain Technology</Feature>
+                    <Feature>Anonymous & Confidential Voting</Feature>
+                    <Feature>Secure & Trustworthy Elections</Feature>
+                    <Feature>Transparent & Digital Ballots</Feature>
                   </VStack>
                 </SimpleGrid>
               </Box>
