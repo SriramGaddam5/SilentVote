@@ -1,0 +1,9 @@
+include "std";
+
+// public state
+export ledger round: Counter;
+
+// transition function changing public state
+export circuit increment(): Void {
+  round.increment(1);
+}

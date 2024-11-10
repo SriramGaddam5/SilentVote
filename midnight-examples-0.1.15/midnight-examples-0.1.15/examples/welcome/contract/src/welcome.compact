@@ -1,0 +1,51 @@
+include "std";
+export { Maybe }
+
+// This contract is not intended to provide a production-grade user registration service. It is intended to be a simple
+// demonstration of a Midnight decentralized application.
+
+// Stores the identity the participant used to check in
+witness set_local_id(participant: Opaque<"string">): Void;
+
+// Secret key of the current user (only defined for organizers)
+witness local_sk(): Maybe<Bytes<32>>;
+
+export ledger organizer_pks: Set<Bytes<32>>;
+export ledger eligible_participants: Set<Opaque<"string">>;
+export ledger checked_in_participants: Set<Opaque<"string">>;
+
+constructor(initial_eligible_participants: Vector<5000, Maybe<Opaque<"string">>>) {
+  organizer_pks.insert(public_key(local_sk_or_error()));
+  for maybe_participant in initial_eligible_participants do {
+    if (maybe_participant.is_some) {
+      eligible_participants.insert(maybe_participant.value);
+    }
+  }
+}
+
+export circuit add_participant(participant: Opaque<"string">): Void {
+  assert organizer_pks.member(public_key(local_sk_or_error())) "Not an organizer";
+  eligible_participants.insert(participant);
+}
+
+export circuit add_organizer(organizer_pk: Bytes<32>): Void {
+  assert organizer_pks.member(public_key(local_sk_or_error())) "Not an organizer";
+  organizer_pks.insert(organizer_pk);
+}
+
+// Yes, anyone can check in as any other eligible participant
+export circuit check_in(participant: Opaque<"string">): Void {
+  assert eligible_participants.member(participant) "Not eligible participant";
+  checked_in_participants.insert(participant);
+  set_local_id(participant);
+}
+
+circuit local_sk_or_error(): Bytes<32> {
+  const maybe_sk = local_sk();
+  assert maybe_sk.is_some "No secret key found";
+  return maybe_sk.value;
+}
+
+export circuit public_key(sk: Bytes<32>): Bytes<32> {
+  return persistent_hash<Vector<2, Bytes<32>>>([pad(32, "welcome:pk:"), sk]);
+}
