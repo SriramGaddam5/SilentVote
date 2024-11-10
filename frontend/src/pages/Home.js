@@ -41,7 +41,7 @@ function Home() {
         events: {
           onHover: {
             enable: true,
-            mode: "bubble",
+            mode: "repulse",
             parallax: {
               enable: false,
               force: 60,
@@ -95,7 +95,7 @@ function Home() {
           distance: 150,
           enable: true,
           opacity: 1,
-          width: 1,
+          width: 2,
         },
         move: {
           enable: true,

@@ -62,7 +62,7 @@ function InfoCard({
                 <Heading
                   size="md"
                   my="2"
-                  bgGradient="linear(to-r, purple.200, purple.500)"
+                  bgGradient="linear(to-r, purple.400, purple.500)"
                   bgClip="text"
                 >
                   <LinkOverlay href={cardLink}>{cardTitle}</LinkOverlay>
