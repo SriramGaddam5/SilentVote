@@ -1,4 +1,5 @@
 import { useState } from "react";
+import candidates from "../backend/candidates.json"; // Adjust path as needed
 import {
   Heading,
   VStack,
@@ -16,10 +17,7 @@ import "../styles/Results.css";
 
 function Results() {
   // State variables
-  const [voters, setVoters] = useState([]);
-  const [voted, setVoted] = useState([]);
-
-  // Get the voters in filepath /backend/responses.json
+  const [candidatesList, setCandidatesList] = useState(candidates.candidates);
 
   return (
     <div id="Body">
@@ -30,18 +28,20 @@ function Results() {
         {/* Loop through table */}
         <TableContainer>
           <Table variant="simple">
-            <TableCaption>Registered Voters</TableCaption>
+            <TableCaption>Election Results</TableCaption>
             <Thead>
               <Tr>
-                <Th>Voter</Th>
-                <Th>Has Voted</Th>
+                <Th>Candidate</Th>
+                <Th>Votes</Th>
               </Tr>
             </Thead>
             <Tbody>
-              {voters.map((voter, index) => (
+              {candidatesList.map((candidate, index) => (
                 <Tr key={index}>
-                  <Td>{voter}</Td>
-                  <Td>{voted[index] ? "Yes" : "No"}</Td>
+                  <Td>{candidate.name}</Td>
+                  {/* <Td>{candidate.votes}</Td>
+                   */}
+                  <Td>{"NA"}</Td>
                 </Tr>
               ))}
             </Tbody>
