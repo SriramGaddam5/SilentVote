@@ -94,6 +94,16 @@ function About() {
         </object>
       </Center>
       <Center>
+      <Text p="30px" fontSize={"xl"} mb="10" color="white">
+        These 4 proofs effectively make elections more secure, anonymous, and trustworthy than physical ballot voting.
+        Voter data is only ever stored on local machines so no data can be stolen in a data breach.
+        All voters can be assured that election results aren't rigged or miscouned since they can verify it themselves.
+        Even a spy eavesdropping on the connection will gain nothing.
+        There is even an added feature that someone can prove they voted without revealing their vote, 
+        something that is impossible to do efficiently with physical ballots.
+        </Text>
+      </Center>
+      <Center>
         <LuVote size={100} />
       </Center>
     </div>
