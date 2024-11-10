@@ -33,3 +33,7 @@ We hope that this project inspires future collaborations between cryptographers 
 ## Features
 
 This project was a part of the 24 hour 2024 TAMU Datathon. You can learn more about it [here](https://www.tamudatathon.com/)
+
+
+## Infographics
+![/frontend/public/images/SilentVoteInfographics.pdf]
