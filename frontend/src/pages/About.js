@@ -102,6 +102,11 @@ function About() {
         There is even an added feature that someone can prove they voted without revealing their vote, 
         something that is impossible to do efficiently with physical ballots.
         </Text>
+        <br/>
+        <br/>
+        <Text fontSize={"2xl"} fontWeight={"bold"} color="purple.400">
+        SilentVote and other blockchains with zero trust architecture are the future of all online transactions!    
+        </Text>
       </Center>
       <Center>
         <LuVote size={100} />
