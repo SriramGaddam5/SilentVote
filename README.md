@@ -58,3 +58,5 @@ Start local server
 ```
 npm start
 ```
+
+Follow this [link](https://docs.midnight.network/develop/tutorial/using/prereqs#supported-platforms) to download the compactc compiler based on your OS and to setup your wallet + midnight environment. Once completed utilize our given examples folder and continue the setup for the examples. Complete the full setup till the call to yarn testnet in the board-cli directory near the end of part 3.
