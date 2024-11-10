@@ -36,4 +36,4 @@ This project was a part of the 24 hour 2024 TAMU Datathon. You can learn more ab
 
 
 ## Infographics
-![infographics](/frontend/public/images/SilentVoteInfographics.pdf)
+[Download PDF here](/frontend/public/images/SilentVoteInfographics.pdf)
