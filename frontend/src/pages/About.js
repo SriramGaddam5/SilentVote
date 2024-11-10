@@ -5,7 +5,7 @@ import {
   Image,
   Spacer,
   Center,
-  Flex,
+  VStack,
 } from "@chakra-ui/react";
 import { LuVote } from "react-icons/lu";
 
@@ -93,8 +93,7 @@ function About() {
           </p>
         </object>
       </Center>
-      <Center>
-        <Text>
+      <VStack>
         <Text p="30px" fontSize={"xl"} mb="10" color="white">
           These 4 proofs effectively make elections more secure, anonymous, and
           trustworthy than physical ballot voting. Voter data is only ever
@@ -112,9 +111,8 @@ function About() {
           SilentVote and other blockchains with zero trust architecture are the
           future of all online transactions!
         </Text>
-        </Text>
-      </Center>
-      <Center>
+      </VStack>
+      <Center mt={20}>
         <LuVote size={100} />
       </Center>
     </div>
