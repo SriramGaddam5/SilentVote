@@ -1,4 +1,12 @@
-import { Heading, Text, HStack, Image, Spacer, Center } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  HStack,
+  Image,
+  Spacer,
+  Center,
+  Flex,
+} from "@chakra-ui/react";
 import { LuVote } from "react-icons/lu";
 
 import "../styles/About.css";
@@ -102,7 +110,6 @@ function About() {
         <Text fontSize={"2xl"} fontWeight={"bold"} color="purple.400">
           SilentVote and other blockchains with zero trust architecture are the
           future of all online transactions!
-        </Text>
         </Text>
       </Center>
       <Center>
