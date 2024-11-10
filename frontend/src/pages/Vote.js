@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import responses from "../backend/responses.json"; // Adjust path as needed
 import {
   Box,
   Flex,
   Heading,
-  Spacer,
   VStack,
   Text,
   Input,
@@ -11,7 +11,6 @@ import {
   Button,
   useToast,
   FormControl,
-  GridItem,
   FormLabel,
 } from "@chakra-ui/react";
 import { GiNestedHexagons } from "react-icons/gi";
@@ -28,39 +27,38 @@ function Vote() {
     "David",
   ]);
   const [selectedCandidate, setSelectedCandidate] = useState("");
-
   const [valid, setValid] = useState(false);
-
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const toast = useToast();
 
-  // Get the candidates from the backend
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/candidates")
-  //     .then((response) => response.json())
-  //     .then((data) => setCandidates(data.candidates));
-  // }, []);
-
-  // Validate the form input
-  if (!valid) {
+  // Check if the form input is valid and if the user is eligible to vote
+  useEffect(() => {
     if (firstName && lastName && selectedCandidate) {
-      setValid(true);
-    }
-  }
+      // Find the voter in the responses data
+      const voter = responses.responses.find(
+        (person) =>
+          person.firstName === firstName && person.lastName === lastName
+      );
 
-  if (valid) {
-    if (!firstName || !lastName || !selectedCandidate) {
-      setValid(false);
+      // Set `valid` to true if the voter exists and hasn't already voted
+      if (voter && !voter.voted) {
+        setValid(true);
+      } else {
+        setValid(false);
+      }
+    } else {
+      setValid(false); // If any required field is missing, set `valid` to false
     }
-  }
+  }, [firstName, lastName, selectedCandidate]);
 
-  // Event handlers
+  // Event handler for voting
   const handleVote = () => {
-    // Create a promise that resolves in 5s
     const promise = new Promise((resolve, reject) => {
       setLoading(true);
 
-      // Send the vote to the backend
+      // Here, you would send the vote to the backend if required
+      // Example:
       // fetch("http://localhost:5000/vote", {
       //   method: "POST",
       //   headers: {
@@ -73,35 +71,32 @@ function Vote() {
       //   }),
       // });
 
-      // Simulate a successful vote
-      setSuccess(true);
-
-      // Simulate a unsuccessful vote
-      // setSuccess(false);
+      setSuccess(true); // Simulate a successful vote
 
       setTimeout(() => {
         if (success) {
           setLoading(false);
           resolve();
+          toast({
+            title: "Vote encrypted!",
+            description: "Vote sent to bulletin board",
+            status: "success",
+            variant: "subtle",
+          });
         } else {
           setLoading(false);
-          reject(); // Reject the promise
+          reject();
+          toast({
+            title: "Vote rejected",
+            description: "Something went wrong :(",
+            status: "error",
+            variant: "subtle",
+          });
         }
-      }, 10000);
+      }, 1000);
     });
 
-    // Will display the loading toast until the promise is either resolved or rejected.
     toast.promise(promise, {
-      success: {
-        title: "Vote encrypted!",
-        description: "Vote sent to bulletin board",
-        variant: "subtle",
-      },
-      error: {
-        title: "Vote rejected",
-        description: "Something went wrong :(",
-        variant: "subtle",
-      },
       loading: {
         title: "Encrypting vote",
         description: "Please wait...",
@@ -110,9 +105,7 @@ function Vote() {
     });
   };
 
-  const toast = useToast();
-
-  // Calculate how long the user has been on the page, format variable as string MM:SS with leading zeros
+  // Time tracking for user session
   const [timeOnPage, setTimeOnPage] = useState("00:00");
   useEffect(() => {
     const interval = setInterval(() => {
@@ -131,8 +124,7 @@ function Vote() {
     return () => clearInterval(interval);
   }, [timeOnPage]);
 
-  // Add a random message from an array that periodically appears on the page
-
+  // Random messages display
   const [randomMessage, setRandomMessage] = useState("");
   useEffect(() => {
     const messages = [
@@ -160,7 +152,6 @@ function Vote() {
       <Heading p="30px" color="gray.300">
         Vote
       </Heading>
-      {/* Form input */}
 
       <Flex p={20} w="auto" justifyContent="center" alignItems="center">
         <VStack>
@@ -173,54 +164,6 @@ function Vote() {
             rounded="3xl"
             w="xl"
           >
-            {/* <FormControl as={GridItem} colSpan={[6, 3]}>
-              <FormLabel
-                htmlFor="first_name"
-                fontSize="sm"
-                fontWeight="md"
-                color="gray.700"
-                _dark={{ color: "gray.50" }}
-              >
-                First name
-              </FormLabel>
-              <Input
-                type="text"
-                name="first_name"
-                id="first_name"
-                autoComplete="given-name"
-                mt={1}
-                focusBorderColor="brand.400"
-                shadow="sm"
-                size="sm"
-                w="full"
-                rounded="md"
-              />
-            </FormControl>
-
-            <FormControl as={GridItem} colSpan={[6, 3]}>
-              <FormLabel
-                htmlFor="last_name"
-                fontSize="sm"
-                fontWeight="md"
-                color="gray.700"
-                _dark={{ color: "gray.50" }}
-              >
-                Last name
-              </FormLabel>
-              <Input
-                type="text"
-                name="last_name"
-                id="last_name"
-                autoComplete="family-name"
-                mt={1}
-                focusBorderColor="brand.400"
-                shadow="sm"
-                size="sm"
-                w="full"
-                rounded="md"
-              />
-            </FormControl> */}
-
             <VStack px="10px" pt="10px" color="white">
               <FormControl mb="10">
                 <FormLabel fontSize={"xl"}>First name</FormLabel>
@@ -270,12 +213,9 @@ function Vote() {
           {loading && (
             <VStack mt={10}>
               <GiNestedHexagons id="loader" size={100} />
-              {/* Display time spent on page */}
               <Text color="white" fontSize="lg">
                 {timeOnPage}
               </Text>
-
-              {/* Display a random message */}
               <Text
                 id="loadingMessage"
                 bgClip="text"
