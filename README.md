@@ -6,15 +6,29 @@
 
 ## About
 
-Silent Vote is a decentralized anonymous voting system.
+### Inspiration
 
-Currently, a voter has to provide identification to prove that they are qualified to vote and have not voted before. That identification may carry other information such as a home address, date of birth, proof of funds in a certain currency, or a simple attestation from a blockchain wallet that the voter might not want to reveal publicly.
+We were inspired by the recent 2024 and 2020 presidential elections where candidates were accusing different parties of election fraud. A platform supporting zero knowledge architecture solves this problem because election results can be transparent and trustworthy while maintaining privacy and security. Voting systems like this can also be used in professional business or school club environments where conflicts of interest made be present and voters wish to stay anonymous.
 
-Blockchain technology provides infrastructure that reduces the opportunity for tampering. And with a DApp using Midnight’s zero-knowledge technology, voters or a decentralized autonomous organization (DAO) voting on behalf of its members can prove what they need to without disclosing unnecessary information. The implications are wide-ranging and profound.
+### What it does
 
-Midnight is a data protection blockchain that offers programmable data protection capabilities powered by zero-knowledge technology to address the delicate balance between data protection, ownership, and utilization. This ensures that developers can leverage blockchain technology without exposing confidential information or losing control over their data.
+The working idea of SilentVote is that election results can be transparent while still maintaining anonymity of voters by aggregating votes without connecting votes to respective voters by utilizing Zero Knowledge Proofs.
 
-To build on Midnight, all you need is familiarity with TypeScript or a similar JavaScript based library. The service is free to use and their developer documentation has all the information you need to get started.
+### How we built it
+
+SilentVote is a Decentralized Application built on the Midnight blockchain with zk-SNARKS, a non-interactive proof system.
+
+### Challenges we ran into
+
+The main challenge of this project was setting up the Midnight testnet and generating correct proofs and verifying them.
+
+### Accomplishments that we're proud of
+
+We managed to create a functional PoC voting platform that supports different blockchain operations on both the shielded and unshielded ledger.
+
+### What's next for Silent Vote
+
+We hope that this project inspires future collaborations between cryptographers and web3 developers to create a fully established ecosystem of anonymous voting systems.
 
 ## Features
 
