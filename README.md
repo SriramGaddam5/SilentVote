@@ -5,7 +5,7 @@
 </h1>
 
 ## Video Demo
-[Link](https://drive.google.com/file/d/13mEbyoH6sTF4pmbE9NoaBdy8No3zFC5r/view?usp=sharing)
+[Link](https://youtu.be/cXCmqtDvojw)
 
 ## About
 
