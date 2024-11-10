@@ -1,5 +1,4 @@
-import { Heading, Text, HStack } from "@chakra-ui/react";
-import { LuVote } from "react-icons/lu";
+import { Heading, Text, HStack, Tooltip, Link, Box } from "@chakra-ui/react";
 
 import "../styles/Privacy.css";
 
@@ -11,11 +10,23 @@ function Privacy() {
       </Heading>
       <HStack my="10">
         <Text p="30px" fontSize={"xl"} color="white">
-          This website collects personal data such as financial data to power
-          our LLM's responses
+          This website does not collect any personal data. It does not use
+          cookies. There is no tracking of any kind. The source code for this
+          website is available on{" "}
+          <Tooltip label="Check out the GitHub" rounded="lg">
+            <Link
+              href="https://github.com/SriramGaddam5/SilentVote"
+              isExternal
+              color="purple.400"
+              _hover={{ color: "purple.300" }}
+              _active={{ color: "purple.200" }}
+            >
+              GitHub
+            </Link>
+          </Tooltip>
+          .
         </Text>
       </HStack>
-      <LuVote id="slide-right" size={100} />
     </div>
   );
 }

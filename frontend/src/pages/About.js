@@ -1,6 +1,5 @@
 import { Heading, Text, HStack, Image, Spacer, Center } from "@chakra-ui/react";
 import { LuVote } from "react-icons/lu";
-import { GrMoney } from "react-icons/gr";
 
 import "../styles/About.css";
 
@@ -13,7 +12,9 @@ function About() {
       <HStack my="10" p="30px">
         <Image src="/images/Vote.svg" w={300} />
         <Text p="30px" fontSize={"xl"} color="white">
-          Silent Vote is a decentralized anonymous voting system.
+          <Text fontSize={"2xl"} fontWeight={"bold"} color="purple.400">
+            Silent Vote is a decentralized anonymous voting system.
+          </Text>
           <br />
           <br />
           Currently, a voter has to provide identification to prove that they
@@ -71,9 +72,8 @@ function About() {
         a platform for creating new business models that offer a radically
         different approach to handling data.
       </Text>
-      <LuVote id="slide-right" size={100} />
       <Center>
-        <GrMoney size={100} />
+        <LuVote size={100} />
       </Center>
     </div>
   );

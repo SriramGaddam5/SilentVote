@@ -9,7 +9,7 @@ function Footer() {
       <Flex
         p={5}
         mt={10}
-        bgGradient="linear(to-t, purple.900, black)"
+        bgGradient="linear(to-t, #110011, black)"
         color="white"
         gap="5"
         alignItems="center"

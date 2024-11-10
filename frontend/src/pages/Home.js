@@ -12,8 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useMemo, useState, useRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { LuVote } from "react-icons/lu";
-import { IoShieldOutline } from "react-icons/io5";
+import { GiNestedHexagons } from "react-icons/gi";
 import { loadSlim } from "@tsparticles/slim";
 import InfoCard from "../components/InfoCard";
 import { useInViewport } from "react-in-viewport";
@@ -52,7 +51,7 @@ function Home() {
         events: {
           onHover: {
             enable: true,
-            mode: "repulse",
+            mode: "bubble",
             parallax: {
               enable: false,
               force: 60,
@@ -61,7 +60,7 @@ function Home() {
           },
           onClick: {
             enable: true,
-            mode: "push",
+            mode: "repulse",
           },
           resize: true,
         },
@@ -185,6 +184,49 @@ function Home() {
     );
   };
 
+  // Calculate how long the user has been on the page, format variable as string MM:SS with leading zeros
+  const [timeOnPage, setTimeOnPage] = useState("00:00");
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let [minutes, seconds] = timeOnPage.split(":").map(Number);
+      seconds += 1;
+      if (seconds === 60) {
+        seconds = 0;
+        minutes += 1;
+      }
+      setTimeOnPage(
+        `${minutes < 10 ? "0" + minutes : minutes}:${
+          seconds < 10 ? "0" + seconds : seconds
+        }`
+      );
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [timeOnPage]);
+
+  // Add a random message from an array that periodically appears on the page
+  // Add a fade effect between messages
+  const [randomMessage, setRandomMessage] = useState("");
+  useEffect(() => {
+    const messages = [
+      "Vote securely and anonymously",
+      "Encrypting your vote",
+      "Ensuring your privacy",
+      "This may take a while",
+      "Please wait",
+      "Loading...",
+      "Your vote is important",
+      "Thanks for voting",
+      "Thanks for using Silent Vote",
+      "Thanks for your patience",
+      "2024 TAMU Datathon",
+    ];
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      setRandomMessage(messages[randomIndex]);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   if (init) {
     return (
       <div id="Body">
@@ -193,6 +235,7 @@ function Home() {
           particlesLoaded={particlesLoaded}
           options={options}
         />
+
         <VStack>
           <SlideFade in={enterCount > 0} direction="left" offsetX="-100px">
             <Text
@@ -217,7 +260,6 @@ function Home() {
             >
               Decentralized anonymous voting
             </Text>
-            <LuVote id="slide-right" size={100} />
           </SlideFade>
 
           <SlideFade in={enterCount > 0} direction="left" offsetX="-100px">
@@ -277,7 +319,7 @@ function Home() {
                   >
                     <Feature>Anonymous voting</Feature>
                     <Feature>Decentralized voting</Feature>
-                    <Feature>Zero-knowledge technology</Feature>
+                    <Feature>Zero-knowledge technology with ZK Snarks</Feature>
                     <Feature>Blockchain technology</Feature>
                     <Feature>Secure voting</Feature>
                     <Feature>Private voting</Feature>
@@ -286,11 +328,31 @@ function Home() {
                     <Feature>Confidential data protection</Feature>
                     <Feature>Private data protection</Feature>
                     <Feature>Zero-knowledge data protection</Feature>
+                    <Feature>Smart contracts</Feature>
                   </VStack>
                 </SimpleGrid>
               </Box>
             </Flex>
           </SlideFade>
+
+          <GiNestedHexagons id="loader" size={100} />
+          {/* Display time spent on page */}
+          <Text color="white" fontSize="lg">
+            {timeOnPage}
+          </Text>
+
+          {/* Display a random message */}
+          <Text
+            id="loadingMessage"
+            bgClip="text"
+            fontSize="lg"
+            fontWeight="bold"
+            rounded="full"
+            px={2}
+            py={1}
+          >
+            {randomMessage}
+          </Text>
 
           <HStack gap={20} mb={20}>
             <InfoCard

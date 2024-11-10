@@ -11,18 +11,39 @@
   font-family: "Major Mono Display";
 }
 
-#slide-right {
-  position: absolute;
-  animation: slide-right 3s forwards;
+#loader {
+  animation: spin 2s linear infinite;
+  background: radial-gradient(circle, #9333ea, #00000000, #00000000);
+  color: #9333ea40;
 }
 
-@keyframes slide-right {
+@keyframes spin {
   0% {
-    left: -100px;
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   100% {
-    left: 0;
-    rotate: 360deg;
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animated gradient */
+#loadingMessage {
+  background: linear-gradient(270deg, #9333ea, #ff2e63, #ff2e63, #9333ea);
+  background-clip: text;
+  background-size: 600% 600%;
+  -webkit-animation: animatedBackground 10s ease infinite;
+  -moz-animation: animatedBackground 10s ease infinite;
+  animation: animatedBackground 10s ease infinite;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
