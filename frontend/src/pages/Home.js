@@ -214,7 +214,7 @@ function Home() {
               fontSize="50"
               mt={10}
             >
-              Decentralized anonymous voting
+            The NextGen Voting Platform
             </Text>
           </SlideFade>
 
@@ -254,8 +254,8 @@ function Home() {
                       color="gray.500"
                     >
                       Silent Vote is a decentralized anonymous voting platform
-                      that allows you to vote securely and anonymously. Start
-                      voting today and start voting securely.
+                      that allows you to vote securely and efficiently. Start
+                      voting today.
                     </chakra.p>
                     <Button
                       as="a"
@@ -276,10 +276,11 @@ function Home() {
                   >
                     <Feature>Decentralized Authentication</Feature>
                     <Feature>Non-Interactive Zero Knowledge Proofs</Feature>
-                    <Feature>Blockchain Technology</Feature>
+                    <Feature>Distributed Blockchain Technology</Feature>
                     <Feature>Anonymous & Confidential Voting</Feature>
                     <Feature>Secure & Trustworthy Elections</Feature>
                     <Feature>Transparent & Digital Ballots</Feature>
+                    <Feature>Efficient & Stable Platforms</Feature>
                   </VStack>
                 </SimpleGrid>
               </Box>
@@ -302,7 +303,7 @@ function Home() {
               imageHeight={200}
               imageAlt="Shield image"
               cardTitle="Progress panel"
-              cardDescription="Access the bulletin board"
+              cardDescription="Check this election's progress"
               cardLink="/progress"
             />
             <InfoCard
