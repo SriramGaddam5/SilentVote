@@ -16,12 +16,10 @@ import "../styles/Results.css";
 
 function Results() {
   // State variables
-  const [voters, setVoters] = useState([
-    "Unknown voter 1",
-    "Unknown voter 2",
-    "Unknown voter 3",
-  ]);
-  const [voted, setVoted] = useState([true, true, false]);
+  const [voters, setVoters] = useState([]);
+  const [voted, setVoted] = useState([]);
+
+  // Get the voters in filepath /backend/responses.json
 
   return (
     <div id="Body">

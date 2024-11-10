@@ -87,7 +87,7 @@ function Vote() {
           setLoading(false);
           reject(); // Reject the promise
         }
-      }, 5000);
+      }, 10000);
     });
 
     // Will display the loading toast until the promise is either resolved or rejected.

@@ -1,0 +1,34 @@
+{
+  "responses": [
+    {
+      "firstName": "Bill",
+      "lastName": "Smith",
+      "voted": true
+    },
+    {
+      "firstName": "Sally",
+      "lastName": "Fisher",
+      "voted": false
+    },
+    {
+      "firstName": "Sahil",
+      "lastName": "Kumar",
+      "voted": false
+    },
+    {
+      "firstName": "William",
+      "lastName": "Aarons",
+      "voted": true
+    },
+    {
+      "firstName": "John",
+      "lastName": "Baker",
+      "voted": false
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Collins",
+      "voted": false
+    }
+  ]
+}
