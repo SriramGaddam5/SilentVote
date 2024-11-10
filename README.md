@@ -37,6 +37,21 @@ We hope that this project inspires future collaborations between cryptographers 
 
 This project was a part of the 24 hour 2024 TAMU Datathon. You can learn more about it [here](https://www.tamudatathon.com/)
 
-
 ## Infographics
 [Download PDF here](/frontend/public/images/SilentVoteInfographics.pdf)
+
+## How to run
+Go to the frontend folder
+```
+cd frontend
+```
+
+Install dependencies
+```
+npm i
+```
+
+Start local server
+```
+npm start
+```
