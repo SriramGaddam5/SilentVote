@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Learn from "./pages/Learn";
+import Admin from "./pages/Admin";
 import About from "./pages/About";
 import Error from "./pages/Error";
-import Data from "./pages/Data";
+import Vote from "./pages/Vote";
 import Privacy from "./pages/Privacy";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -28,10 +28,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/learn" element={<Learn />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/data" element={<Data />} />
+          <Route path="/vote" element={<Vote />} />
           <Route path="/*" element={<Error />} />
         </Routes>
       </Router>

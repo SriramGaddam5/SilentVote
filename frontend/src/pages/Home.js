@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useMemo, useState, useRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { GiNestedHexagons } from "react-icons/gi";
 import { loadSlim } from "@tsparticles/slim";
 import InfoCard from "../components/InfoCard";
 import { useInViewport } from "react-in-viewport";
@@ -184,49 +183,6 @@ function Home() {
     );
   };
 
-  // Calculate how long the user has been on the page, format variable as string MM:SS with leading zeros
-  const [timeOnPage, setTimeOnPage] = useState("00:00");
-  useEffect(() => {
-    const interval = setInterval(() => {
-      let [minutes, seconds] = timeOnPage.split(":").map(Number);
-      seconds += 1;
-      if (seconds === 60) {
-        seconds = 0;
-        minutes += 1;
-      }
-      setTimeOnPage(
-        `${minutes < 10 ? "0" + minutes : minutes}:${
-          seconds < 10 ? "0" + seconds : seconds
-        }`
-      );
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [timeOnPage]);
-
-  // Add a random message from an array that periodically appears on the page
-
-  const [randomMessage, setRandomMessage] = useState("");
-  useEffect(() => {
-    const messages = [
-      "Vote securely and anonymously",
-      "Encrypting your vote",
-      "Ensuring your privacy",
-      "This may take a while",
-      "Please wait",
-      "Loading...",
-      "Your vote is important",
-      "Thanks for voting",
-      "Thanks for using Silent Vote",
-      "Thanks for your patience",
-      "2024 TAMU Datathon",
-    ];
-    const interval = setInterval(() => {
-      const randomIndex = Math.floor(Math.random() * messages.length);
-      setRandomMessage(messages[randomIndex]);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   if (init) {
     return (
       <div id="Body">
@@ -307,6 +263,7 @@ function Home() {
                       w={{ base: "full", sm: "auto" }}
                       colorScheme="purple"
                       size="lg"
+                      href="/vote"
                     >
                       Vote Now
                     </Button>
@@ -335,49 +292,30 @@ function Home() {
             </Flex>
           </SlideFade>
 
-          <GiNestedHexagons id="loader" size={100} />
-          {/* Display time spent on page */}
-          <Text color="white" fontSize="lg">
-            {timeOnPage}
-          </Text>
-
-          {/* Display a random message */}
-          <Text
-            id="loadingMessage"
-            bgClip="text"
-            fontSize="lg"
-            fontWeight="bold"
-            rounded="full"
-            px={2}
-            py={1}
-          >
-            {randomMessage}
-          </Text>
-
           <HStack gap={20} mb={20}>
             <InfoCard
-              imageSrc="/images/Anonymous.svg"
+              imageSrc="/images/Vote.svg"
               imageWidth={200}
               imageHeight={200}
-              imageAlt="Learning image"
-              cardTitle="Tell Silent Vote about yourself"
+              imageAlt="Voting image"
+              cardTitle="Vote now"
               cardDescription="Get started with Silent Vote here"
-              cardLink="/data"
+              cardLink="/vote"
             />
             <InfoCard
               imageSrc="/images/Shield.svg"
               imageWidth={200}
               imageHeight={200}
-              imageAlt="Learning image"
-              cardTitle="Start learning"
-              cardDescription="Learn more about finance"
-              cardLink="/learn"
+              imageAlt="Shield image"
+              cardTitle="Admin panel"
+              cardDescription="Access the bulletin board"
+              cardLink="/admin"
             />
             <InfoCard
-              imageSrc="/images/Vote.svg"
+              imageSrc="/images/Anonymous.svg"
               imageWidth={200}
               imageHeight={200}
-              imageAlt="About image"
+              imageAlt="Anonymous image"
               cardTitle="About us"
               cardDescription="Learn more about Silent Vote"
               cardLink="/about"
