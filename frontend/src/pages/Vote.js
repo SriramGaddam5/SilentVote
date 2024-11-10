@@ -93,7 +93,7 @@ function Vote() {
             variant: "subtle",
           });
         }
-      }, 5000);
+      }, 1000);
     });
 
     toast.promise(promise, {
