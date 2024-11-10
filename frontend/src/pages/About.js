@@ -1,4 +1,12 @@
-import { Heading, Text, HStack, Image, Spacer, Center } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  HStack,
+  Image,
+  Spacer,
+  Center,
+  Flex,
+} from "@chakra-ui/react";
 import { LuVote } from "react-icons/lu";
 
 import "../styles/About.css";
@@ -72,9 +80,19 @@ function About() {
         a platform for creating new business models that offer a radically
         different approach to handling data.
       </Text>
-       <object data="/images/SilentVoteInfographics.pdf" type="application/pdf" width="100%" height="100%">
-        <p>Alternative text - include a link <a href="/images/SilentVoteInfographics.pdf">to the PDF!</a></p>
-       </object>
+      <Center>
+        <object
+          data="/images/SilentVoteInfographics.pdf"
+          type="application/pdf"
+          width="75%"
+          height="850px"
+        >
+          <p>
+            Alternative text - include a link{" "}
+            <a href="/images/SilentVoteInfographics.pdf">to the PDF!</a>
+          </p>
+        </object>
+      </Center>
       <Center>
         <LuVote size={100} />
       </Center>
