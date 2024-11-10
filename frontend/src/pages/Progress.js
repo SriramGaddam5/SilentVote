@@ -12,9 +12,9 @@ import {
   TableCaption,
   TableContainer,
 } from "@chakra-ui/react";
-import "../styles/Admin.css";
+import "../styles/Progress.css";
 
-function Admin() {
+function Progress() {
   // State variables
   const [voters, setVoters] = useState([
     "Unknown voter 1",
@@ -26,7 +26,7 @@ function Admin() {
   return (
     <div id="Body">
       <Heading p="30px" color="gray.300">
-        Admin
+        Progress
       </Heading>
       <VStack p="30px" spacing="20px" color="white">
         {/* Loop through table */}
@@ -54,4 +54,4 @@ function Admin() {
   );
 }
 
-export default Admin;
+export default Progress;

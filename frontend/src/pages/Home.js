@@ -307,9 +307,9 @@ function Home() {
               imageWidth={200}
               imageHeight={200}
               imageAlt="Shield image"
-              cardTitle="Admin panel"
+              cardTitle="Progress panel"
               cardDescription="Access the bulletin board"
-              cardLink="/admin"
+              cardLink="/progress"
             />
             <InfoCard
               imageSrc="/images/Anonymous.svg"

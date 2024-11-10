@@ -35,11 +35,21 @@ function Navbar() {
         <Spacer />
         <Tooltip label="View bulletin board" rounded="lg">
           <Link
-            href="/admin"
+            href="/progress"
             _hover={{ color: "purple.500", transform: "scale(0.99)" }}
             _active={{ color: "purple.400", transform: "scale(1.01)" }}
           >
-            Admin
+            Progresss
+          </Link>
+        </Tooltip>
+        <Spacer />
+        <Tooltip label="View voting results" rounded="lg">
+          <Link
+            href="/results"
+            _hover={{ color: "purple.500", transform: "scale(0.99)" }}
+            _active={{ color: "purple.400", transform: "scale(1.01)" }}
+          >
+            Results
           </Link>
         </Tooltip>
         <Spacer />

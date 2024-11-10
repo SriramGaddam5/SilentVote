@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Admin from "./pages/Admin";
+import Progress from "./pages/Progress";
+import Results from "./pages/Results";
 import About from "./pages/About";
 import Error from "./pages/Error";
 import Vote from "./pages/Vote";
@@ -28,7 +29,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="/results" element={<Results />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/vote" element={<Vote />} />
