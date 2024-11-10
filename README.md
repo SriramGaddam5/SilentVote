@@ -7,6 +7,9 @@
 ## Video Demo
 [Link](https://youtu.be/cXCmqtDvojw)
 
+## Live Demo Only for TAMU_WIFI for 11/10/24
+[Link](http://10.246.137.22:3000/)
+
 ## About
 
 ### Inspiration
