@@ -220,77 +220,79 @@ function Home() {
             <LuVote id="slide-right" size={100} />
           </SlideFade>
 
-          <Flex p={20} w="auto" justifyContent="center" alignItems="center">
-            <Box
-              shadow="xl"
-              bg="gray.800"
-              px={8}
-              py={20}
-              mx="auto"
-              rounded="3xl"
-            >
-              <SimpleGrid
-                alignItems="center"
-                columns={{ base: 1, lg: 2 }}
-                spacingY={{ base: 10, lg: 32 }}
-                spacingX={{ base: 10, lg: 24 }}
+          <SlideFade in={enterCount > 0} direction="left" offsetX="-100px">
+            <Flex p={20} w="auto" justifyContent="center" alignItems="center">
+              <Box
+                shadow="xl"
+                bg="gray.800"
+                px={8}
+                py={20}
+                mx="auto"
+                rounded="3xl"
               >
-                <Box>
-                  <chakra.h2
-                    mb={3}
-                    fontSize={{ base: "3xl", md: "4xl" }}
-                    fontWeight="extrabold"
-                    textAlign={{ base: "center", sm: "left" }}
-                    lineHeight="shorter"
-                    letterSpacing="tight"
-                    bgGradient="linear(to-r, purple.500, purple.700)"
-                    bgClip="text"
-                  >
-                    Secure and anonymous voting
-                  </chakra.h2>
-                  <chakra.p
-                    mb={6}
-                    fontSize={{ base: "lg", md: "xl" }}
-                    textAlign={{ base: "center", sm: "left" }}
-                    color="gray.500"
-                  >
-                    Silent Vote is a decentralized anonymous voting platform
-                    that allows you to vote securely and anonymously. Start
-                    voting today and start voting securely.
-                  </chakra.p>
-                  <Button
-                    as="a"
-                    variant="solid"
-                    w={{ base: "full", sm: "auto" }}
-                    colorScheme="purple"
-                    size="lg"
-                  >
-                    Vote Now
-                  </Button>
-                </Box>
-                <VStack
-                  direction="column"
-                  flexGrow={1}
-                  spacing={5}
-                  alignItems="start"
+                <SimpleGrid
+                  alignItems="center"
+                  columns={{ base: 1, lg: 2 }}
+                  spacingY={{ base: 10, lg: 32 }}
+                  spacingX={{ base: 10, lg: 24 }}
                 >
-                  <Feature>Anonymous voting</Feature>
-                  <Feature>Decentralized voting</Feature>
-                  <Feature>Zero-knowledge technology</Feature>
-                  <Feature>Blockchain technology</Feature>
-                  <Feature>Secure voting</Feature>
-                  <Feature>Private voting</Feature>
-                  <Feature>Confidential voting</Feature>
-                  <Feature>Secure data protection</Feature>
-                  <Feature>Confidential data protection</Feature>
-                  <Feature>Private data protection</Feature>
-                  <Feature>Zero-knowledge data protection</Feature>
-                </VStack>
-              </SimpleGrid>
-            </Box>
-          </Flex>
+                  <Box>
+                    <chakra.h2
+                      mb={3}
+                      fontSize={{ base: "3xl", md: "4xl" }}
+                      fontWeight="extrabold"
+                      textAlign={{ base: "center", sm: "left" }}
+                      lineHeight="shorter"
+                      letterSpacing="tight"
+                      bgGradient="linear(to-r, purple.500, purple.700)"
+                      bgClip="text"
+                    >
+                      Secure and anonymous voting
+                    </chakra.h2>
+                    <chakra.p
+                      mb={6}
+                      fontSize={{ base: "lg", md: "xl" }}
+                      textAlign={{ base: "center", sm: "left" }}
+                      color="gray.500"
+                    >
+                      Silent Vote is a decentralized anonymous voting platform
+                      that allows you to vote securely and anonymously. Start
+                      voting today and start voting securely.
+                    </chakra.p>
+                    <Button
+                      as="a"
+                      variant="solid"
+                      w={{ base: "full", sm: "auto" }}
+                      colorScheme="purple"
+                      size="lg"
+                    >
+                      Vote Now
+                    </Button>
+                  </Box>
+                  <VStack
+                    direction="column"
+                    flexGrow={1}
+                    spacing={5}
+                    alignItems="start"
+                  >
+                    <Feature>Anonymous voting</Feature>
+                    <Feature>Decentralized voting</Feature>
+                    <Feature>Zero-knowledge technology</Feature>
+                    <Feature>Blockchain technology</Feature>
+                    <Feature>Secure voting</Feature>
+                    <Feature>Private voting</Feature>
+                    <Feature>Confidential voting</Feature>
+                    <Feature>Secure data protection</Feature>
+                    <Feature>Confidential data protection</Feature>
+                    <Feature>Private data protection</Feature>
+                    <Feature>Zero-knowledge data protection</Feature>
+                  </VStack>
+                </SimpleGrid>
+              </Box>
+            </Flex>
+          </SlideFade>
 
-          <HStack gap={20}>
+          <HStack gap={20} mb={20}>
             <InfoCard
               imageSrc="/images/Anonymous.svg"
               imageWidth={200}
