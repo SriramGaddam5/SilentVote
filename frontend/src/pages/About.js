@@ -103,6 +103,7 @@ function About() {
           SilentVote and other blockchains with zero trust architecture are the
           future of all online transactions!
         </Text>
+        </Text>
       </Center>
       <Center>
         <LuVote size={100} />
