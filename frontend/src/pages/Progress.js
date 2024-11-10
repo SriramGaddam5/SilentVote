@@ -17,12 +17,14 @@ import "../styles/Progress.css";
 
 function Progress() {
   // State variables
-  const [voters, setVoters] = useState([
-    "Unknown voter 1",
-    "Unknown voter 2",
-    "Unknown voter 3",
-  ]);
-  const [voted, setVoted] = useState([true, true, false]);
+  const [voters, setVoters] = useState(
+    responses.responses.map(
+      (person) => `${person.firstName} ${person.lastName}`
+    )
+  );
+  const [voted, setVoted] = useState(
+    responses.responses.map((person) => `${person.voted}`)
+  );
 
   return (
     <div id="Body">
@@ -44,7 +46,7 @@ function Progress() {
               {voters.map((voter, index) => (
                 <Tr key={index}>
                   <Td>{voter}</Td>
-                  <Td>{voted[index] ? "Yes" : "No"}</Td>
+                  <Td>{voted[index] === "true" ? "Yes" : "No"}</Td>
                 </Tr>
               ))}
             </Tbody>
