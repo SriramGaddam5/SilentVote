@@ -1,4 +1,4 @@
-import { Heading, Text, HStack, Tooltip, Link, Box } from "@chakra-ui/react";
+import { Heading, Text, HStack, Tooltip, Link } from "@chakra-ui/react";
 
 import "../styles/Privacy.css";
 
