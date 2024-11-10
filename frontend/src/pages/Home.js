@@ -275,7 +275,7 @@ function Home() {
                     alignItems="start"
                   >
                     <Feature>Decentralized Authentication</Feature>
-                    <Feature>Non-Interactive Zero Knowledge Proofs</Feature>
+                    <Feature>Non-Interactive Zero Knowledge Architecture</Feature>
                     <Feature>Distributed Blockchain Technology</Feature>
                     <Feature>Anonymous & Confidential Voting</Feature>
                     <Feature>Secure & Trustworthy Elections</Feature>
