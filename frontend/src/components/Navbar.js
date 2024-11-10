@@ -39,7 +39,7 @@ function Navbar() {
             _hover={{ color: "purple.500", transform: "scale(0.99)" }}
             _active={{ color: "purple.400", transform: "scale(1.01)" }}
           >
-            Progresss
+            Progress
           </Link>
         </Tooltip>
         <Spacer />
