@@ -1,4 +1,15 @@
-import { Text, VStack, HStack, SlideFade } from "@chakra-ui/react";
+import {
+  Text,
+  VStack,
+  HStack,
+  SlideFade,
+  Flex,
+  Icon,
+  Box,
+  SimpleGrid,
+  Button,
+  chakra,
+} from "@chakra-ui/react";
 import { useEffect, useMemo, useState, useRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { LuVote } from "react-icons/lu";
@@ -152,6 +163,28 @@ function Home() {
     []
   );
 
+  const Feature = (props) => {
+    return (
+      <Flex>
+        <Icon
+          boxSize={5}
+          mt={1}
+          mr={2}
+          color="white"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          ></path>
+        </Icon>
+        <chakra.p fontSize="lg" color="gray.400" {...props} />
+      </Flex>
+    );
+  };
+
   if (init) {
     return (
       <div id="Body">
@@ -186,6 +219,77 @@ function Home() {
             </Text>
             <LuVote id="slide-right" size={100} />
           </SlideFade>
+
+          <Flex p={20} w="auto" justifyContent="center" alignItems="center">
+            <Box
+              shadow="xl"
+              bg="gray.800"
+              px={8}
+              py={20}
+              mx="auto"
+              rounded="3xl"
+            >
+              <SimpleGrid
+                alignItems="center"
+                columns={{ base: 1, lg: 2 }}
+                spacingY={{ base: 10, lg: 32 }}
+                spacingX={{ base: 10, lg: 24 }}
+              >
+                <Box>
+                  <chakra.h2
+                    mb={3}
+                    fontSize={{ base: "3xl", md: "4xl" }}
+                    fontWeight="extrabold"
+                    textAlign={{ base: "center", sm: "left" }}
+                    lineHeight="shorter"
+                    letterSpacing="tight"
+                    bgGradient="linear(to-r, purple.500, purple.700)"
+                    bgClip="text"
+                  >
+                    Secure and anonymous voting
+                  </chakra.h2>
+                  <chakra.p
+                    mb={6}
+                    fontSize={{ base: "lg", md: "xl" }}
+                    textAlign={{ base: "center", sm: "left" }}
+                    color="gray.500"
+                  >
+                    Silent Vote is a decentralized anonymous voting platform
+                    that allows you to vote securely and anonymously. Start
+                    voting today and start voting securely.
+                  </chakra.p>
+                  <Button
+                    as="a"
+                    variant="solid"
+                    w={{ base: "full", sm: "auto" }}
+                    colorScheme="purple"
+                    size="lg"
+                  >
+                    Vote Now
+                  </Button>
+                </Box>
+                <VStack
+                  direction="column"
+                  flexGrow={1}
+                  spacing={5}
+                  alignItems="start"
+                >
+                  <Feature>Anonymous voting</Feature>
+                  <Feature>Decentralized voting</Feature>
+                  <Feature>Zero-knowledge technology</Feature>
+                  <Feature>Blockchain technology</Feature>
+                  <Feature>Secure voting</Feature>
+                  <Feature>Private voting</Feature>
+                  <Feature>Confidential voting</Feature>
+                  <Feature>Secure data protection</Feature>
+                  <Feature>Confidential data protection</Feature>
+                  <Feature>Private data protection</Feature>
+                  <Feature>Zero-knowledge data protection</Feature>
+                </VStack>
+              </SimpleGrid>
+            </Box>
+          </Flex>
+
           <HStack gap={20}>
             <InfoCard
               imageSrc="/images/Anonymous.svg"
