@@ -94,6 +94,7 @@ function About() {
         </object>
       </Center>
       <Center>
+        <Text>
       <Text p="30px" fontSize={"xl"} mb="10" color="white">
         These 4 proofs effectively make elections more secure, anonymous, and trustworthy than physical ballot voting.
         Voter data is only ever stored on local machines so no data can be stolen in a data breach.
@@ -106,6 +107,7 @@ function About() {
         <br/>
         <Text fontSize={"2xl"} fontWeight={"bold"} color="purple.400">
         SilentVote and other blockchains with zero trust architecture are the future of all online transactions!    
+        </Text>
         </Text>
       </Center>
       <Center>
